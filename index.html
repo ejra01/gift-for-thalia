@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>For Thalia 💜</title>
+<title>Happy Birthday Sayang 💜</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
@@ -16,7 +16,7 @@ font-family:'Poppins',sans-serif;
 }
 
 body{
-background:linear-gradient(135deg,#1d1035,#47206b,#7d4cff);
+background:linear-gradient(135deg,#2b1055,#5b2c83,#8e44ad);
 color:white;
 overflow-x:hidden;
 }
@@ -24,31 +24,41 @@ overflow-x:hidden;
 section{
 min-height:100vh;
 display:flex;
-flex-direction:column;
 justify-content:center;
 align-items:center;
 padding:30px;
+}
+
+.card{
+width:100%;
+max-width:800px;
+background:rgba(255,255,255,.08);
+backdrop-filter:blur(12px);
+padding:35px;
+border-radius:25px;
 text-align:center;
+box-shadow:0 10px 35px rgba(0,0,0,.3);
+}
+
+.hidden{
+display:none;
 }
 
 h1{
-font-size:45px;
+font-size:42px;
 margin-bottom:20px;
 }
 
 h2{
-font-size:30px;
 margin-bottom:20px;
 }
 
 p{
-max-width:700px;
 line-height:1.8;
-font-size:18px;
+margin-bottom:20px;
 }
 
 button{
-margin-top:25px;
 padding:15px 35px;
 border:none;
 border-radius:40px;
@@ -57,116 +67,141 @@ color:#7d4cff;
 font-size:18px;
 font-weight:bold;
 cursor:pointer;
-transition:.3s;
 }
 
 button:hover{
 transform:scale(1.05);
-}
-
-.card{
-background:rgba(255,255,255,.08);
-backdrop-filter:blur(12px);
-padding:30px;
-border-radius:25px;
-box-shadow:0 0 30px rgba(255,255,255,.1);
-}
-
-.hidden{
-display:none;
-}
-
-img{
-width:220px;
-border-radius:20px;
-margin:12px;
+transition:.3s;
 }
 
 .gallery{
 display:flex;
 flex-wrap:wrap;
 justify-content:center;
-}
-
-video{
-width:320px;
-border-radius:20px;
+gap:15px;
 margin-top:20px;
 }
 
-#heart{
-font-size:80px;
-animation:beat 1s infinite;
+.gallery img{
+width:180px;
+border-radius:18px;
+box-shadow:0 5px 20px rgba(0,0,0,.3);
 }
 
-@keyframes beat{
-50%{transform:scale(1.2);}
+.heart{
+position:fixed;
+top:-50px;
+font-size:25px;
+animation:fall linear forwards;
+pointer-events:none;
 }
 
-.fade{
-animation:fade 1s;
+@keyframes fall{
+to{
+transform:translateY(110vh);
+opacity:0;
 }
-
-@keyframes fade{
-from{opacity:0;transform:translateY(30px);}
-to{opacity:1;transform:translateY(0);}
-}
-
-.countdown{
-font-size:28px;
-margin-top:20px;
-font-weight:bold;
 }
 </style>
 </head>
 
 <body>
 
-<section id="welcome">
-<div class="card fade">
-<div id="heart">💜</div>
-
-<h1>A Gift I Made Just For You</h1>
+<section id="page1">
+<div class="card">
+<h1>💜 Happy Birthday 💜</h1>
 
 <p>
-Untuk seseorang yang paling berarti dalam hidupku.
+Untuk seseorang yang paling spesial di hidupku...
 </p>
 
-<button onclick="next()">Open My Gift</button>
+<button onclick="showPage2()">
+Open My Heart ❤️
+</button>
 </div>
 </section>
 
 <section id="page2" class="hidden">
-<div class="card fade">
+<div class="card">
 
-<h2>Happy Birthday Sayang 🎂</h2>
+<h2>Untuk Sayangku 💜</h2>
 
 <p>
-12 Juli 2007 lahirlah seseorang yang sekarang menjadi alasan bahagiaku.
-Terima kasih sudah hadir dalam hidupku.
-Semoga semua impianmu satu per satu menjadi nyata.
-Aku akan selalu mendoakan yang terbaik untukmu.
+Selamat ulang tahun, Sayangku. 🎂❤️
+<br><br>
+
+Hari ini adalah hari yang sangat spesial karena tepat pada tanggal <b>12 Juli</b> dunia menghadirkan seseorang yang luar biasa untukku.
+
+Terima kasih sudah menjadi bagian dari hidupku, terima kasih atas semua tawa, perhatian, dan semua kenangan yang sudah kita lewati bersama.
+
+Semoga di umurmu sekarang kamu selalu diberikan kesehatan, kebahagiaan, rezeki yang berlimpah, serta semua impianmu bisa tercapai satu per satu.
+
+Aku mungkin belum menjadi yang paling sempurna, tapi aku akan selalu berusaha menjadi seseorang yang bisa membuatmu tersenyum.
+
+Aku sayang kamu, hari ini, besok, dan seterusnya. ❤️
 </p>
 
-<button onclick="next2()">Next</button>
+<button onclick="showGallery()">
+Lihat Kenangan Kita 📸
+</button>
 
 </div>
 </section>
 
-<script>
-function next(){
-document.getElementById("welcome").classList.add("hidden");
-document.getElementById("page2").classList.remove("hidden");
-}
+<section id="gallery" class="hidden">
+<div class="card">
 
-function next2(){
-alert("Lanjut ke halaman berikutnya setelah Part 2 dipasang 💜");
-}
-</script>
+<h2>Our Memories 📸</h2>
 
-</body>
-</html>
-function showPage2(){
+<div class="gallery">
+
+<img src="FullSizeRender.jpeg">
+<img src="IMG_0645.jpeg">
+<img src="IMG_0660.jpeg">
+<img src="IMG_1049.jpeg">
+<img src="IMG_1321.jpeg">
+<img src="IMG_1411.jpeg">
+<img src="IMG_1728.jpeg">
+<img src="IMG_1773.jpeg">
+<img src="IMG_2004.jpeg">
+<img src="IMG_6041.jpeg">
+<img src="IMG_6322.jpeg">
+<img src="IMG_6347.jpeg">
+
+</div>
+
+<p style="margin-top:30px">
+Setiap foto ini adalah bukti kalau bersamamu selalu menjadi momen yang berharga. 💜
+</p>
+
+<button onclick="finishGift()">
+Pesan Terakhir ❤️
+</button>
+
+</div>
+</section>
+
+<section id="last" class="hidden">
+<div class="card">
+
+<h1>❤️ I Love You ❤️</h1>
+
+<p>
+Terima kasih sudah hadir dalam hidupku.
+
+Aku berharap kita masih bisa membuat banyak cerita indah bersama.
+
+Semoga setiap ulang tahunmu nanti aku masih bisa menjadi orang yang mengucapkan "Selamat Ulang Tahun" paling pertama.
+
+Happy Birthday once again, Sayangku. 💜
+</p>
+
+<h2>Forever With You ✨</h2>
+
+</div>
+</section>
+
+<script> function showPage2(){
     document.getElementById("page1").classList.add("hidden");
     document.getElementById("page2").classList.remove("hidden");
 }
