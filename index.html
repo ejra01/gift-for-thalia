@@ -4,157 +4,34 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Happy Birthday Sayang 💜</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
-
 <style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
-}
-
-body{
-background:linear-gradient(135deg,#2b1055,#5b2c83,#8e44ad);
-color:white;
-overflow-x:hidden;
-}
-
-section{
-min-height:100vh;
-display:flex;
-justify-content:center;
-align-items:center;
-padding:30px;
-}
-
-.card{
-width:100%;
-max-width:800px;
-background:rgba(255,255,255,.08);
-backdrop-filter:blur(12px);
-padding:35px;
-border-radius:25px;
-text-align:center;
-box-shadow:0 10px 35px rgba(0,0,0,.3);
-}
-
-.hidden{
-display:none;
-}
-
-h1{
-font-size:42px;
-margin-bottom:20px;
-}
-
-h2{
-margin-bottom:20px;
-}
-
-p{
-line-height:1.8;
-margin-bottom:20px;
-}
-
-button{
-padding:15px 35px;
-border:none;
-border-radius:40px;
-background:white;
-color:#7d4cff;
-font-size:18px;
-font-weight:bold;
-cursor:pointer;
-}
-
-button:hover{
-transform:scale(1.05);
-transition:.3s;
-}
-
-.gallery{
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
-gap:15px;
-margin-top:20px;
-}
-
-.gallery img{
-width:180px;
-border-radius:18px;
-box-shadow:0 5px 20px rgba(0,0,0,.3);
-}
-
-.heart{
-position:fixed;
-top:-50px;
-font-size:25px;
-animation:fall linear forwards;
-pointer-events:none;
-}
-
-@keyframes fall{
-to{
-transform:translateY(110vh);
-opacity:0;
-}
-}
+body{margin:0;font-family:Arial,sans-serif;background:linear-gradient(135deg,#5b2c83,#8e44ad);color:#fff}
+.hidden{display:none}
+section{min-height:100vh;display:flex;justify-content:center;align-items:center;padding:20px}
+.card{max-width:800px;background:rgba(255,255,255,.12);padding:30px;border-radius:20px;text-align:center}
+button{padding:12px 24px;border:none;border-radius:30px;font-size:18px;cursor:pointer}
+.gallery{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
+.gallery img{width:170px;border-radius:12px}
+.heart{position:fixed;top:-30px;font-size:24px;animation:fall 5s linear forwards}
+@keyframes fall{to{transform:translateY(110vh);opacity:0}}
 </style>
 </head>
-
 <body>
+<section id="p1"><div class="card">
+<h1>💜 Happy Birthday Sayang 💜</h1>
+<p>Untuk seseorang yang paling spesial di hidupku.</p>
+<button onclick="go2()">Open My Heart ❤️</button>
+</div></section>
 
-<section id="page1">
-<div class="card">
-<h1>💜 Happy Birthday 💜</h1>
+<section id="p2" class="hidden"><div class="card">
+<h2>Untuk Sayangku</h2>
+<p>Selamat ulang tahun! Terima kasih sudah hadir dalam hidupku. Semoga semua impianmu tercapai, selalu sehat, bahagia, dan semoga kita bisa terus membuat kenangan indah bersama. Aku sayang kamu, hari ini, besok, dan seterusnya. ❤️</p>
+<button onclick="go3()">Lihat Kenangan 📸</button>
+</div></section>
 
-<p>
-Untuk seseorang yang paling spesial di hidupku...
-</p>
-
-<button onclick="showPage2()">
-Open My Heart ❤️
-</button>
-</div>
-</section>
-
-<section id="page2" class="hidden">
-<div class="card">
-
-<h2>Untuk Sayangku 💜</h2>
-
-<p>
-Selamat ulang tahun, Sayangku. 🎂❤️
-<br><br>
-
-Hari ini adalah hari yang sangat spesial karena tepat pada tanggal <b>12 Juli</b> dunia menghadirkan seseorang yang luar biasa untukku.
-
-Terima kasih sudah menjadi bagian dari hidupku, terima kasih atas semua tawa, perhatian, dan semua kenangan yang sudah kita lewati bersama.
-
-Semoga di umurmu sekarang kamu selalu diberikan kesehatan, kebahagiaan, rezeki yang berlimpah, serta semua impianmu bisa tercapai satu per satu.
-
-Aku mungkin belum menjadi yang paling sempurna, tapi aku akan selalu berusaha menjadi seseorang yang bisa membuatmu tersenyum.
-
-Aku sayang kamu, hari ini, besok, dan seterusnya. ❤️
-</p>
-
-<button onclick="showGallery()">
-Lihat Kenangan Kita 📸
-</button>
-
-</div>
-</section>
-
-<section id="gallery" class="hidden">
-<div class="card">
-
+<section id="p3" class="hidden"><div class="card">
 <h2>Our Memories 📸</h2>
-
 <div class="gallery">
-
 <img src="FullSizeRender.jpeg">
 <img src="IMG_0645.jpeg">
 <img src="IMG_0660.jpeg">
@@ -167,227 +44,12 @@ Lihat Kenangan Kita 📸
 <img src="IMG_6041.jpeg">
 <img src="IMG_6322.jpeg">
 <img src="IMG_6347.jpeg">
-
 </div>
+<p>Setiap foto adalah kenangan yang sangat berharga. 💜</p>
+</div></section>
 
-<p style="margin-top:30px">
-Setiap foto ini adalah bukti kalau bersamamu selalu menjadi momen yang berharga. 💜
-</p>
-
-<button onclick="finishGift()">
-Pesan Terakhir ❤️
-</button>
-
-</div>
-</section>
-
-<section id="last" class="hidden">
-<div class="card">
-
-<h1>❤️ I Love You ❤️</h1>
-
-<p>
-Terima kasih sudah hadir dalam hidupku.
-
-Aku berharap kita masih bisa membuat banyak cerita indah bersama.
-
-Semoga setiap ulang tahunmu nanti aku masih bisa menjadi orang yang mengucapkan "Selamat Ulang Tahun" paling pertama.
-
-Happy Birthday once again, Sayangku. 💜
-</p>
-
-<h2>Forever With You ✨</h2>
-
-</div>
-</section>
-
-<script> function showPage2(){
-    document.getElementById("page1").classList.add("hidden");
-    document.getElementById("page2").classList.remove("hidden");
-}
-
-function showGallery(){
-    document.getElementById("page2").classList.add("hidden");
-    document.getElementById("gallery").classList.remove("hidden");
-
-    createHearts();
-}
-
-function finishGift(){
-    document.getElementById("gallery").classList.add("hidden");
-    document.getElementById("last").classList.remove("hidden");
-
-    createHearts();
-}
-
-function createHearts(){
-
-    for(let i=0;i<40;i++){
-
-        let heart=document.createElement("div");
-
-        heart.className="heart";
-
-        heart.innerHTML=Math.random()>0.5?"💜":"❤️";
-
-        heart.style.left=Math.random()*100+"vw";
-
-        heart.style.animationDuration=(3+Math.random()*3)+"s";
-
-        heart.style.fontSize=(20+Math.random()*20)+"px";
-
-        document.body.appendChild(heart);
-
-        setTimeout(()=>{
-            heart.remove();
-        },6000);
-
-    }
-
-}
+<script>
+function go2(){p1.classList.add('hidden');p2.classList.remove('hidden')}
+function go3(){p2.classList.add('hidden');p3.classList.remove('hidden');for(let i=0;i<40;i++){let h=document.createElement('div');h.className='heart';h.innerHTML=Math.random()>.5?'💜':'❤️';h.style.left=Math.random()*100+'vw';document.body.appendChild(h);setTimeout(()=>h.remove(),5000);}}
 </script>
-
-</body>
-</html>
-function showPage2(){
-    document.getElementById("page1").classList.add("hidden");
-    document.getElementById("page2").classList.remove("hidden");
-}
-
-function showGallery(){
-    document.getElementById("page2").classList.add("hidden");
-    document.getElementById("gallery").classList.remove("hidden");
-
-    createHearts();
-}
-
-function finishGift(){
-    document.getElementById("gallery").classList.add("hidden");
-    document.getElementById("last").classList.remove("hidden");
-
-    createHearts();
-}
-
-function createHearts(){
-
-    for(let i=0;i<40;i++){
-
-        let heart=document.createElement("div");
-
-        heart.className="heart";
-
-        heart.innerHTML=Math.random()>0.5?"💜":"❤️";
-
-        heart.style.left=Math.random()*100+"vw";
-
-        heart.style.animationDuration=(3+Math.random()*3)+"s";
-
-        heart.style.fontSize=(20+Math.random()*20)+"px";
-
-        document.body.appendChild(heart);
-
-        setTimeout(()=>{
-            heart.remove();
-        },6000);
-
-    }
-
-}
-</script>
-
-</body>
-</function showPage2(){
-    document.getElementById("page1").classList.add("hidden");
-    document.getElementById("page2").classList.remove("hidden");
-}
-
-function showGallery(){
-    document.getElementById("page2").classList.add("hidden");
-    document.getElementById("gallery").classList.remove("hidden");
-
-    createHearts();
-}
-
-function finishGift(){
-    document.getElementById("gallery").classList.add("hidden");
-    document.getElementById("last").classList.remove("hidden");
-
-    createHearts();
-}
-
-function createHearts(){
-
-    for(let i=0;i<40;i++){
-
-        let heart=document.createElement("div");
-
-        heart.className="heart";
-
-        heart.innerHTML=Math.random()>0.5?"💜":"❤️";
-
-        heart.style.left=Math.random()*100+"vw";
-
-        heart.style.animationDuration=(3+Math.random()*3)+"s";
-
-        heart.style.fontSize=(20+Math.random()*20)+"px";
-
-        document.body.appendChild(heart);
-
-        setTimeout(()=>{
-            heart.remove();
-        },6000);
-
-    }
-
-}
-</script>
-
-</body>
-</htmlfunction showPage2(){
-    document.getElementById("page1").classList.add("hidden");
-    document.getElementById("page2").classList.remove("hidden");
-}
-
-function showGallery(){
-    document.getElementById("page2").classList.add("hidden");
-    document.getElementById("gallery").classList.remove("hidden");
-
-    createHearts();
-}
-
-function finishGift(){
-    document.getElementById("gallery").classList.add("hidden");
-    document.getElementById("last").classList.remove("hidden");
-
-    createHearts();
-}
-
-function createHearts(){
-
-    for(let i=0;i<40;i++){
-
-        let heart=document.createElement("div");
-
-        heart.className="heart";
-
-        heart.innerHTML=Math.random()>0.5?"💜":"❤️";
-
-        heart.style.left=Math.random()*100+"vw";
-
-        heart.style.animationDuration=(3+Math.random()*3)+"s";
-
-        heart.style.fontSize=(20+Math.random()*20)+"px";
-
-        document.body.appendChild(heart);
-
-        setTimeout(()=>{
-            heart.remove();
-        },6000);
-
-    }
-
-}
-</script>
-
-</body>
-</html>
+</body></html>
