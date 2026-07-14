@@ -249,3 +249,51 @@ function createHearts(){
 
 </body>
 </html>
+function showPage2(){
+    document.getElementById("page1").classList.add("hidden");
+    document.getElementById("page2").classList.remove("hidden");
+}
+
+function showGallery(){
+    document.getElementById("page2").classList.add("hidden");
+    document.getElementById("gallery").classList.remove("hidden");
+
+    createHearts();
+}
+
+function finishGift(){
+    document.getElementById("gallery").classList.add("hidden");
+    document.getElementById("last").classList.remove("hidden");
+
+    createHearts();
+}
+
+function createHearts(){
+
+    for(let i=0;i<40;i++){
+
+        let heart=document.createElement("div");
+
+        heart.className="heart";
+
+        heart.innerHTML=Math.random()>0.5?"💜":"❤️";
+
+        heart.style.left=Math.random()*100+"vw";
+
+        heart.style.animationDuration=(3+Math.random()*3)+"s";
+
+        heart.style.fontSize=(20+Math.random()*20)+"px";
+
+        document.body.appendChild(heart);
+
+        setTimeout(()=>{
+            heart.remove();
+        },6000);
+
+    }
+
+}
+</script>
+
+</body>
+</ht
