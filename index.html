@@ -3,62 +3,94 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>A Gift I Made Just For You 💜</title>
+<title>Happy Birthday ❤️</title>
 
 <style>
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial,Helvetica,sans-serif;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,Helvetica,sans-serif;
 }
 
 body{
-background:linear-gradient(135deg,#5b2c83,#8e44ad,#c39bd3);
-height:100vh;
-display:flex;
-justify-content:center;
-align-items:center;
-color:white;
-text-align:center;
-padding:20px;
+    background:linear-gradient(135deg,#6a11cb,#8e44ad);
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
 }
 
 .card{
-max-width:400px;
-background:rgba(255,255,255,.1);
-backdrop-filter:blur(12px);
-padding:30px;
-border-radius:25px;
-box-shadow:0 10px 40px rgba(0,0,0,.3);
+    width:90%;
+    max-width:500px;
+    background:rgba(255,255,255,.12);
+    backdrop-filter:blur(12px);
+    padding:35px;
+    border-radius:25px;
+    text-align:center;
+    color:white;
+    box-shadow:0 10px 30px rgba(0,0,0,.3);
 }
 
 h1{
-font-size:32px;
-margin-bottom:20px;
+    font-size:55px;
+}
+
+h2{
+    margin:15px 0;
 }
 
 p{
-margin-bottom:30px;
-line-height:1.6;
+    line-height:1.8;
+    margin:20px 0;
 }
 
 button{
-background:white;
-color:#7b2cbf;
-padding:15px 35px;
-border:none;
-border-radius:50px;
-font-size:18px;
-font-weight:bold;
-cursor:pointer;
+    background:white;
+    color:#6a11cb;
+    border:none;
+    padding:16px 35px;
+    border-radius:50px;
+    font-size:18px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.3s;
 }
 
 button:hover{
-transform:scale(1.05);
+    transform:scale(1.05);
+}
+
+#letter{
+    display:none;
+    margin-top:25px;
+    animation:fade .8s;
+}
+
+@keyframes fade{
+from{opacity:0;transform:translateY(20px);}
+to{opacity:1;transform:translateY(0);}
+}
+
+.heart{
+    position:fixed;
+    color:#ffb6ff;
+    animation:fall linear forwards;
+}
+
+@keyframes fall{
+from{
+transform:translateY(-10vh);
+opacity:1;
+}
+to{
+transform:translateY(110vh);
+opacity:0;
+}
 }
 </style>
-
 </head>
 
 <body>
@@ -67,22 +99,72 @@ transform:scale(1.05);
 
 <h1>💜</h1>
 
-<h2>A Gift I Made Just For You</h2>
-
-<br>
+<h2>Happy Birthday, Sayang 🎂</h2>
 
 <p>
-Happy Birthday, Sayang.
-<br><br>
-This little website was made with all my love,
-especially for you.
+Website kecil ini aku buat khusus buat kamu.
+Semoga hari ini penuh kebahagiaan,
+tawa, dan semua hal baik yang kamu impikan.
 </p>
 
-<button onclick="alert('Coming Soon 💜')">
-Open My Heart
+<button onclick="openLetter()">
+Open My Heart ❤️
 </button>
 
+<div id="letter">
+
+<hr style="margin:25px 0;border-color:rgba(255,255,255,.3)">
+
+<p>
+Selamat ulang tahun ya, sayang. 💜<br><br>
+
+Terima kasih sudah hadir di hidupku.
+Semoga semua cita-citamu tercapai,
+selalu sehat,
+selalu bahagia,
+dan semoga aku masih boleh menemani setiap langkahmu.
+
+Aku sayang kamu,
+hari ini,
+besok,
+dan seterusnya. ❤️
+</p>
+
 </div>
+
+</div>
+
+<script>
+
+function openLetter(){
+
+document.getElementById("letter").style.display="block";
+
+for(let i=0;i<35;i++){
+
+let heart=document.createElement("div");
+
+heart.innerHTML="💜";
+
+heart.className="heart";
+
+heart.style.left=Math.random()*100+"vw";
+
+heart.style.fontSize=(20+Math.random()*25)+"px";
+
+heart.style.animationDuration=(3+Math.random()*3)+"s";
+
+document.body.appendChild(heart);
+
+setTimeout(()=>{
+heart.remove();
+},6000);
+
+}
+
+}
+
+</script>
 
 </body>
 </html>
